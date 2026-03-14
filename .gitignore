@@ -1,0 +1,7 @@
+# Local config
+config/ops.env
+
+# Local runtime artifacts
+state/
+logs/
+*.log

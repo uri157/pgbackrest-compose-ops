@@ -1,0 +1,11 @@
+[Unit]
+Description=pgBackRest full backup (weekly)
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=__DEPLOY_DIR__
+EnvironmentFile=__DEPLOY_DIR__/env/.env.compose
+EnvironmentFile=__DEPLOY_DIR__/env/.env.backup
+ExecStart=__SCRIPT_DST_DIR__/pgbackrest-backup.sh full

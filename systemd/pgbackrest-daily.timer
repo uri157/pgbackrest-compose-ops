@@ -1,0 +1,11 @@
+[Unit]
+Description=Run pgBackRest differential backup daily
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+RandomizedDelaySec=30m
+Unit=__UNIT_PREFIX__-daily.service
+
+[Install]
+WantedBy=timers.target

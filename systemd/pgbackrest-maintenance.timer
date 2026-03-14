@@ -1,0 +1,11 @@
+[Unit]
+Description=Run pgBackRest maintenance daily
+
+[Timer]
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+RandomizedDelaySec=30m
+Unit=__UNIT_PREFIX__-maintenance.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run pgBackRest full backup weekly
+
+[Timer]
+OnCalendar=Sun *-*-* 02:00:00
+Persistent=true
+RandomizedDelaySec=30m
+Unit=__UNIT_PREFIX__-weekly.service
+
+[Install]
+WantedBy=timers.target
