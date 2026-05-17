@@ -2,8 +2,6 @@
 
 Bash toolkit for safe PostgreSQL backup/restore operations with pgBackRest in Docker Compose, including restore-to-new-volume, shadow validation, controlled cutover, and rollback-friendly workflows.
 
-Spanish version: [README.es.md](README.es.md)
-
 ## Why This Exists
 
 Running `pgbackrest` commands is not the hard part. The hard part is operating restores and cutovers safely in production.
